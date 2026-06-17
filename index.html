@@ -2,15 +2,15 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>數學闖關對戰</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
-html,body{width:100%;height:100vh;overflow:hidden;
+html,body{width:100%;height:100vh;height:100dvh;overflow:hidden;
   background:#fff6ec;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;
   user-select:none;color:#6b4f3f;}
 
-.screen{display:none;width:100%;height:100vh;flex-direction:column;}
+.screen{display:none;width:100%;height:100vh;height:100dvh;flex-direction:column;}
 .screen.active{display:flex;}
 
 /* ── START / END ── */
@@ -61,6 +61,7 @@ html,body{width:100%;height:100vh;overflow:hidden;
 @keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-12px)}}
 
 /* ── GAME ── */
+#gameScreen{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);}
 .player-area{flex:1;display:flex;flex-direction:column;padding:8px 16px 10px;position:relative;overflow:hidden;min-height:0;}
 #p2Area{transform:rotate(180deg);background:linear-gradient(to bottom,#fbe4f3,#f6d3ea);border-bottom:4px solid #e09ad1;}
 #p1Area{background:linear-gradient(to bottom,#ffe8d2,#ffdab8);border-top:4px solid #ff9e6d;}
